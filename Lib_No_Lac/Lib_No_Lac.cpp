@@ -97,19 +97,19 @@ void show_histogram(string const& name, Mat1b const& image)
 
 		float const height = cvRound(column_sum * hist_height / max);
 
-		if (i >= (col_low - 7) && i < (col_low + 6))
+		if (i >= (col_low - 100) && i < (col_low + 100))
 		{
-			cout << "H--" << height << endl;
+			//cout << "H--" << height << endl;
 			H_AVG += height;
 
 		}
 	}
-	H_AVG = H_AVG / 13;			//best value for average 
+	H_AVG = H_AVG / 200;			//best value for average 
 	float H_Minus = H_AVG - height_low;
 
-	cout << "H_AVG____" << H_AVG << endl;
+	//cout << "H_AVG____" << H_AVG << endl;
 	cout << "low " << height_low << endl;
-	cout << "H_AVG-------Minus " << H_Minus << endl;
+	//cout << "H_AVG-------Minus " << H_Minus << endl;
 	//cout << "locate low " << col_low << endl;
 
 
@@ -128,12 +128,12 @@ void show_histogram(string const& name, Mat1b const& image)
 
 	drawContours(hist_image, contours, 0, Scalar(0, 0, 255), 2, 8, vector<Vec4i>(), 0, Point());
 	drawContours(hist_image, hull, 0, Scalar(0, 255, 0), 2, 8, vector<Vec4i>(), 0, Point());
-	cout << " AreaC: " << contourArea(contours[0]) << endl;
-	cout << " AreaH: " << contourArea(hull[0]) << endl;
+	//cout << " AreaC: " << contourArea(contours[0]) << endl;
+	//cout << " AreaH: " << contourArea(hull[0]) << endl;
 	float reN = 0;
 	reN = contourArea(hull[0]) - contourArea(contours[0]);
 	//cout << " Result: " << reN << endl;
-	if (H_Minus > 5) {
+	if (height_low > 90) {
 		cout << " Defect Detection  " << endl;
 		cout << "===================" << endl;
 	}
@@ -177,7 +177,6 @@ int Histogram_Calculate(Mat image) {
 			}
 		}
 	}
-
 
 
 	// Set histogram bins count
@@ -239,7 +238,7 @@ int Polar_Function(Mat image, Point2f center, float radiused) {
 	Mat imgPoLin;
 
 	linearPolar(image, imgPoLin, center, radiused + 10, INTER_LINEAR + WARP_FILL_OUTLIERS);
-	imshow("5", imgPoLin);
+	//imshow("5", imgPoLin);
 
 	Rect myROI(380, 0, 130, 510);
 	Mat croppedRef(imgPoLin, myROI);
@@ -287,13 +286,13 @@ int Center_Circle(Mat image, Mat imageOriginal) {
 			largest_area = area;
 			largest_contour_index = i;               //Store the index of largest contour.
 		}
-		cout << area << endl;
-		cout << "----------------- " << endl;
+	//	cout << area << endl;
+		//cout << "----------------- " << endl;
 
 	}
 
-	cout << largest_area << endl;
-	cout << "================== " << endl;
+	//cout << largest_area << endl;
+	//cout << "================== " << endl;
 	//cout << largest_contour_index << endl;
 	Mat testimg;
 	// Draw circle for show Edge of lib

@@ -22,22 +22,22 @@ C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(134,29): warnin
 C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(61,8): warning C4101: 'height_A': unreferenced local variable
 C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(170,11): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
 C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(174,11): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(186,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(186,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(193,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(211,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(211,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(212,57): warning C4244: 'argument': conversion from 'float' to '_Tp', possible loss of data
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(185,25): warning C4838: conversion from 'int' to 'float' requires a narrowing conversion
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(185,25): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(192,46): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(210,31): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(210,22): warning C4244: 'initializing': conversion from 'int' to 'const float', possible loss of data
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(211,57): warning C4244: 'argument': conversion from 'float' to '_Tp', possible loss of data
           with
           [
               _Tp=int
           ]
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(212,78): warning C4244: 'argument': conversion from 'const float' to '_Tp', possible loss of data
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(211,78): warning C4244: 'argument': conversion from 'const float' to '_Tp', possible loss of data
           with
           [
               _Tp=int
           ]
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(198,8): warning C4101: 'height_A': unreferenced local variable
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(287,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
-C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(288,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(197,8): warning C4101: 'height_A': unreferenced local variable
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(286,19): warning C4244: '=': conversion from 'double' to 'int', possible loss of data
+C:\Users\User\Desktop\mydev\Lib_No_Lac\Lib_No_Lac\Lib_No_Lac.cpp(287,29): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
   Lib_No_Lac.vcxproj -> C:\Users\User\Desktop\mydev\Lib_No_Lac\x64\Debug\Lib_No_Lac.exe
