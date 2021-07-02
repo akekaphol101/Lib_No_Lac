@@ -97,18 +97,18 @@ void show_histogram(string const& name, Mat1b const& image)
 
 		float const height = cvRound(column_sum * hist_height / max);
 
-		if (i >= (col_low - 100) && i < (col_low + 100))
+		if (i >= (col_low - 7) && i < (col_low + 6))
 		{
 			//cout << "H--" << height << endl;
 			H_AVG += height;
 
 		}
 	}
-	H_AVG = H_AVG / 200;			//best value for average 
+	H_AVG = H_AVG / 13;			//best value for average 
 	float H_Minus = H_AVG - height_low;
 
-	//cout << "H_AVG____" << H_AVG << endl;
-	cout << "low " << height_low << endl;
+	cout << "H_AVG____" << H_AVG << endl;
+	//cout << "low " << height_low << endl;
 	//cout << "H_AVG-------Minus " << H_Minus << endl;
 	//cout << "locate low " << col_low << endl;
 
@@ -133,7 +133,7 @@ void show_histogram(string const& name, Mat1b const& image)
 	float reN = 0;
 	reN = contourArea(hull[0]) - contourArea(contours[0]);
 	//cout << " Result: " << reN << endl;
-	if (height_low > 90) {
+	if ( H_AVG > 100) {
 		cout << " Defect Detection  " << endl;
 		cout << "===================" << endl;
 	}
