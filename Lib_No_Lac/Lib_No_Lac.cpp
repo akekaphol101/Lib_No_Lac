@@ -13,13 +13,13 @@ using namespace cv;
 using namespace std;
 using namespace std::chrono;
 
-int largest_area = 0;
-int largest_contour_index = 0;
+int largest_area = 0;					//Parameter for value of area largest.
+int largest_contour_index = 0;			//Parameter for index of area largest.
 
-int P_backward = 7;		//Parameter for back column value size.
-int P_forward = 6;		//Parameter for next column value size.
-int P_divide = 13;		//Parameter for divide high average.
-int P_score = 100;		//Parameter for check no lacquer lib.
+int P_backward = 7;						//Parameter for back column value size.
+int P_forward = 6;						//Parameter for next column value size.
+int P_divide = 13;						//Parameter for divide high average.
+int P_score = 100;						//Parameter for check no lacquer lib.
 
 void show_histogram(string const& name, Mat1b const& image)
 {
@@ -265,7 +265,7 @@ int Check_No_lac(Mat imageOriginal) {
 
 int main(int argc, const char* argv[]) {
 	Mat imgOri, imgRz;
-	int recheck = 0;
+	int result = 0;
 
 	string folder("img/*.jpg");
 	vector<String> fn;
@@ -276,6 +276,15 @@ int main(int argc, const char* argv[]) {
 	//Check number of images.
 	cout << "image in folder  " << count << endl;
 
+
+	 largest_area = 0;					//Parameter for value of area largest.
+	 largest_contour_index = 0;			//Parameter for index of area largest.
+
+	 P_backward = 7;					//Parameter for back column value size.
+	 P_forward = 6;						//Parameter for next column value size.
+	 P_divide = 13;						//Parameter for divide high average.
+	 P_score = 100;						//Parameter for check no lacquer lib.
+
 	//Main LooB.
 	for (size_t i = 0; i < count; i++)
 	{
@@ -283,7 +292,7 @@ int main(int argc, const char* argv[]) {
 		imgOri = imread(fn[i]);
 		resize(imgOri, imgRz, Size(), 0.5, 0.5); //Half Resize 1280*1040 to 640*520 pixcel.
 
-		recheck = Check_No_lac(imgRz);			 //Call function check no lacquer lib.
+		result = Check_No_lac(imgRz);			 //Call function check no lacquer lib.
 		waitKey(0);
 	}
 	waitKey(0);
